@@ -21,6 +21,13 @@
     <module>webapp</module>
   </modules>
 
+  <distributionManagement>
+    <site>
+      <id>site-server</id>
+      <name>Test Project Site</name>
+      <url>file:///tmp/maven-project-site</url>
+    </site>
+  </distributionManagement>
 
   <build>
     <plugins>
@@ -197,13 +204,13 @@
         <scope>test</scope>
       </dependency>
     </dependencies>
-    <distributionManagement>
+   <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
         <name>ip-172-31-10-105.ec2.internal-snapshots</name>
-        <url>http://44.200.163.228:8081/artifactory/libs-snapshot-local</url>
+        <url>http://ec2-44-200-163-228.compute-1.amazonaws.com:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
-</distributionManagement>
+</distributionManagement> 
   </dependencyManagement>
 
   <prerequisites>
